@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 import seaborn as sns
 
 import tensorflow as tf
-df = pd.read_excel('C:/Users/rlaeh/OneDrive/바탕 화면/myDataset.xlsx')
+df = pd.read_csv('https://raw.githubusercontent.com/donghaeK/dataSet/main/myDataset.csv')
 
 
 # In[2]:
@@ -27,15 +27,15 @@ X = df[['grade','study_Time','salary','Certification','Positive']]
 # In[3]:
 
 
-y = df['twentylater_salary']
+y = df['Salary after 10 years']
 #rint(type(y))
 
 
 # In[4]:
 
 
-print(X.values)
-print(y.values)
+#print(X.values)
+#print(y.values)
 
 
 # In[5]:
@@ -63,7 +63,7 @@ score = regr.score(X_test, y_test)
 print(score)
 
 
-# In[9]:
+# In[8]:
 
 
 plt.scatter(y_pred, y_test, color='blue')
@@ -72,7 +72,7 @@ plt.plot(x,x, linewidth=5, color='black')
 plt.show()
 
 
-# In[29]:
+# In[9]:
 
 
 sns.set(rc={'figure.figsize':(10,10)})
